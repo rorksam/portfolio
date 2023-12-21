@@ -1,17 +1,17 @@
-# portfolio
-# summary
+## Portfolio
+# Summary
 A collection of important projects and programs
 
-# detail
+# Body
 Below are a list of all the different programs you'll find in this file, how to run them, and their contact in my classes.
 
-# list
+# List
 1. San Francisco project
-   This is a basic java package that takes the data found SF_restaurant_scores_full.csv, parses it, creates a list of these restaurants, and makes it searchable by zip code and name.
+   This is a java package that takes the data found SF_restaurant_scores_full.csv, parses it, creates a list of these restaurants, and makes it searchable by zip code and name.
    You can run this in any java code compiler.
    This project was for Professor John Ortega's CSC017 class (Fundamentals of ComSci III) at Hofstra University.
 2. BST/AVL
-   Another basic java package, this time creating a generic list class based on the Binary Search Tree and AVL Tree formats. Any data type that implements Comparable can use these list classes.
+   Another java package, this time creating a generic list class based on the Binary Search Tree and AVL Tree formats. Any data type that implements Comparable can use these list classes.
    You can run this in any java code compiler.
    This project was for Professor John Ortega's CSC017 class (Fundamentals of ComSci III) at Hofstra University.
 3. Traffic Light Project
