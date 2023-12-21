@@ -1,11 +1,11 @@
-## Portfolio
-# Summary
+# Portfolio
+## Summary
 A collection of important projects and programs
 
-# Body
+## Body
 Below are a list of all the different programs you'll find in this file, how to run them, and their contact in my classes.
 
-# List
+## List
 1. San Francisco project
    This is a java package that takes the data found SF_restaurant_scores_full.csv, parses it, creates a list of these restaurants, and makes it searchable by zip code and name.
    You can run this in any java code compiler.
