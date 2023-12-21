@@ -1,5 +1,0 @@
-MODULE top
-	SUBMODULE state_machine
-		INSTANCE XLXI_21
-	SUBMODULE slow_clock
-		INSTANCE XLXI_16
