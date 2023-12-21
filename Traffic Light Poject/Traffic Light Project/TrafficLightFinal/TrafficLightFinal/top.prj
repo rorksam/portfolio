@@ -1,0 +1,3 @@
+vhdl work "state_machine.vhd"
+vhdl work "slow_counter.vhd"
+verilog work "top.vf"

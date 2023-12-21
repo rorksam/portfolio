@@ -1,0 +1,524 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\ENGG32B\TrafficWeek4p2\top.vf" into library work
+Parsing module <D2_4E_HXILINX_top>.
+Parsing module <top>.
+Parsing VHDL file "C:\ENGG32B\TrafficWeek4p2\state_machine.vhd" into library work
+Parsing entity <state_machine>.
+Parsing architecture <Behavioral> of entity <state_machine>.
+Parsing VHDL file "C:\ENGG32B\TrafficWeek4p2\slow_counter.vhd" into library work
+Parsing entity <slow_clock>.
+Parsing architecture <Behavioral> of entity <slow_clock>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <D2_4E_HXILINX_top>.
+
+Elaborating module <OR2>.
+
+Elaborating module <VCC>.
+Going to vhdl side to elaborate module slow_clock
+
+Elaborating entity <slow_clock> (architecture <Behavioral>) from library <work>.
+Back to verilog to continue elaboration
+Going to vhdl side to elaborate module state_machine
+
+Elaborating entity <state_machine> (architecture <Behavioral>) from library <work>.
+Back to verilog to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\ENGG32B\TrafficWeek4p2\top.vf".
+    Set property "HU_SET = XLXI_3_0" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_1" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_17_2" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_18_3" for instance <XLXI_18>.
+    Set property "HU_SET = XLXI_19_4" for instance <XLXI_19>.
+    Set property "HU_SET = XLXI_20_5" for instance <XLXI_20>.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 127: Output port <D3> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 135: Output port <D3> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 159: Output port <D3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 167: Output port <D3> of the instance <XLXI_18> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 175: Output port <D3> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ENGG32B\TrafficWeek4p2\top.vf" line 183: Output port <D3> of the instance <XLXI_20> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <D2_4E_HXILINX_top>.
+    Related source file is "C:\ENGG32B\TrafficWeek4p2\top.vf".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <D2_4E_HXILINX_top> synthesized.
+
+Synthesizing Unit <slow_clock>.
+    Related source file is "C:\ENGG32B\TrafficWeek4p2\slow_counter.vhd".
+    Found 1-bit register for signal <cnt<29>>.
+    Found 1-bit register for signal <cnt<28>>.
+    Found 1-bit register for signal <cnt<27>>.
+    Found 1-bit register for signal <cnt<26>>.
+    Found 1-bit register for signal <cnt<25>>.
+    Found 1-bit register for signal <cnt<30>>.
+    Found 1-bit register for signal <cnt<24>>.
+    Found 1-bit register for signal <cnt<23>>.
+    Found 1-bit register for signal <cnt<22>>.
+    Found 1-bit register for signal <cnt<21>>.
+    Found 1-bit register for signal <cnt<20>>.
+    Found 1-bit register for signal <cnt<19>>.
+    Found 1-bit register for signal <cnt<18>>.
+    Found 1-bit register for signal <cnt<17>>.
+    Found 1-bit register for signal <cnt<16>>.
+    Found 1-bit register for signal <cnt<15>>.
+    Found 1-bit register for signal <cnt<14>>.
+    Found 1-bit register for signal <cnt<13>>.
+    Found 1-bit register for signal <cnt<12>>.
+    Found 1-bit register for signal <cnt<11>>.
+    Found 1-bit register for signal <cnt<10>>.
+    Found 1-bit register for signal <cnt<9>>.
+    Found 1-bit register for signal <cnt<8>>.
+    Found 1-bit register for signal <cnt<7>>.
+    Found 1-bit register for signal <cnt<6>>.
+    Found 1-bit register for signal <cnt<5>>.
+    Found 1-bit register for signal <cnt<4>>.
+    Found 1-bit register for signal <cnt<3>>.
+    Found 1-bit register for signal <cnt<2>>.
+    Found 1-bit register for signal <cnt<1>>.
+    Found 1-bit register for signal <cnt<0>>.
+    Found 31-bit adder for signal <cnt[30]_GND_9_o_add_0_OUT> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+Unit <slow_clock> synthesized.
+
+Synthesizing Unit <state_machine>.
+    Related source file is "C:\ENGG32B\TrafficWeek4p2\state_machine.vhd".
+    Set property "enum_encoding = 00000000000000000000000001 00000000000000000000000010 00000000000000000000000100 00000000000000000000001000 00000000000000000000010000 00000000000000000000100000 00000000000000000001000000 00000000000000000010000000 00000000000000000100000000 00000000000000001000000000 00000000000000010000000000 00000000000000100000000000 00000000000001000000000000 00000000000010000000000000 00000000000100000000000000 00000000001000000000000000 00000000010000000000000000 00000000100000000000000000 00000001000000000000000000 00000010000000000000000000 00000100000000000000000000 00001000000000000000000000 00010000000000000000000000 00100000000000000000000000 01000000000000000000000000 10000000000000000000000000" for signal <CS>.
+    Set property "enum_encoding = 00000000000000000000000001 00000000000000000000000010 00000000000000000000000100 00000000000000000000001000 00000000000000000000010000 00000000000000000000100000 00000000000000000001000000 00000000000000000010000000 00000000000000000100000000 00000000000000001000000000 00000000000000010000000000 00000000000000100000000000 00000000000001000000000000 00000000000010000000000000 00000000000100000000000000 00000000001000000000000000 00000000010000000000000000 00000000100000000000000000 00000001000000000000000000 00000010000000000000000000 00000100000000000000000000 00001000000000000000000000 00010000000000000000000000 00100000000000000000000000 01000000000000000000000000 10000000000000000000000000" for signal <NS>.
+    Found 26-bit register for signal <CS>.
+    Found finite state machine <FSM_0> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 26                                             |
+    | Transitions        | 71                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 26                                             |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | hwygreen0                                      |
+    | Power Up State     | hwygreen0                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <state_machine> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 31-bit adder                                          : 1
+# Registers                                            : 31
+ 1-bit register                                        : 31
+# Multiplexers                                         : 24
+ 1-bit 2-to-1 multiplexer                              : 24
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 31-bit adder                                          : 1
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Multiplexers                                         : 24
+ 1-bit 2-to-1 multiplexer                              : 24
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <XLXI_21/FSM_0> on signal <CS[1:26]> with user encoding.
+-----------------------------------------------
+ State           | Encoding
+-----------------------------------------------
+ hwygreen0       | 00000000000000000000000001
+ hwygreen1       | 00000000000000000000000010
+ hwyyellow0      | 00000000000000000000000100
+ hwyyellow1      | 00000000000000000000001000
+ hwyred0         | 00000000000000000000010000
+ hwyred1         | 00000000000000000000100000
+ farmgreen0      | 00000000000000000001000000
+ farmgreen1      | 00000000000000000010000000
+ farmyellow0     | 00000000000000000100000000
+ farmyellow1     | 00000000000000001000000000
+ farmred0        | 00000000000000010000000000
+ farmred1        | 00000000000000100000000000
+ hwyturn0        | 00000000000001000000000000
+ hwyturn1        | 00000000000010000000000000
+ hwyturnyellow0  | 00000000000100000000000000
+ hwyturnyellow1  | 00000000001000000000000000
+ farmturn0       | 00000000010000000000000000
+ farmturn1       | 00000000100000000000000000
+ farmturnyellow0 | 00000001000000000000000000
+ farmturnyellow1 | 00000010000000000000000000
+ farmcross0      | 00000100000000000000000000
+ farmcross1      | 00001000000000000000000000
+ hwycross0       | 00010000000000000000000000
+ hwycross1       | 00100000000000000000000000
+ hwycrossyellow0 | 01000000000000000000000000
+ hwycrossyellow1 | 10000000000000000000000000
+-----------------------------------------------
+
+Optimizing unit <top> ...
+
+Optimizing unit <slow_clock> ...
+
+Optimizing unit <state_machine> ...
+
+Optimizing unit <D2_4E_HXILINX_top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 189
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 30
+#      LUT2                        : 24
+#      LUT3                        : 30
+#      LUT4                        : 14
+#      LUT5                        : 15
+#      LUT6                        : 8
+#      MUXCY                       : 30
+#      OR2                         : 4
+#      VCC                         : 1
+#      XORCY                       : 31
+# FlipFlops/Latches                : 57
+#      FD_1                        : 25
+#      FDC                         : 25
+#      FDC_1                       : 6
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 5
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              57  out of  126800     0%  
+ Number of Slice LUTs:                  122  out of  63400     0%  
+    Number used as Logic:               122  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    122
+   Number with an unused Flip Flop:      65  out of    122    53%  
+   Number with an unused LUT:             0  out of    122     0%  
+   Number of fully used LUT-FF pairs:    57  out of    122    46%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    210    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 57    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.254ns (Maximum Frequency: 159.898MHz)
+   Minimum input arrival time before clock: 2.770ns
+   Maximum output required time after clock: 4.275ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 6.254ns (frequency: 159.898MHz)
+  Total number of paths / destination ports: 1070 / 63
+-------------------------------------------------------------------------
+Delay:               3.127ns (Levels of Logic = 2)
+  Source:            XLXI_21/CS_FSM_FFd22 (FF)
+  Destination:       XLXI_16/cnt_29 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock falling
+
+  Data Path: XLXI_21/CS_FSM_FFd22 to XLXI_16/cnt_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.478   0.933  XLXI_21/CS_FSM_FFd22 (XLXI_21/CS_FSM_FFd22)
+     LUT5:I0->O            2   0.124   0.542  XLXI_21/CS_clear1 (XLXI_21/CS_clear)
+     LUT5:I3->O            6   0.124   0.432  XLXI_21/CS_clear4 (XLXN_6)
+     FDC_1:CLR                 0.494          XLXI_16/cnt_28
+    ----------------------------------------
+    Total                      3.127ns (1.220ns logic, 1.907ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 145 / 83
+-------------------------------------------------------------------------
+Offset:              2.770ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       XLXI_16/cnt_29 (FF)
+  Destination Clock: clock falling
+
+  Data Path: reset to XLXI_16/cnt_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.001   0.873  reset_IBUF (reset_IBUF)
+     LUT4:I1->O            2   0.124   0.722  XLXI_21/CS_clear3 (XLXI_21/CS_clear2)
+     LUT5:I2->O            6   0.124   0.432  XLXI_21/CS_clear4 (XLXN_6)
+     FDC_1:CLR                 0.494          XLXI_16/cnt_28
+    ----------------------------------------
+    Total                      2.770ns (0.743ns logic, 2.027ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 158 / 16
+-------------------------------------------------------------------------
+Offset:              4.275ns (Levels of Logic = 6)
+  Source:            XLXI_21/CS_FSM_FFd2 (FF)
+  Destination:       FG (PAD)
+  Source Clock:      clock rising
+
+  Data Path: XLXI_21/CS_FSM_FFd2 to FG
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.478   0.966  XLXI_21/CS_FSM_FFd2 (XLXI_21/CS_FSM_FFd2)
+     LUT6:I0->O            4   0.124   0.441  XLXI_21/FL011 (XLXN_44)
+     LUT4:I3->O            3   0.124   0.550  XLXI_21/FL02 (XLXN_16)
+     begin scope: 'XLXI_4:A0'
+     LUT2:I0->O            2   0.124   0.945  Mmux_D211 (D2)
+     end scope: 'XLXI_4:D2'
+     OR2:I0->O             1   0.124   0.399  XLXI_10 (FG_OBUF)
+     OBUF:I->O                 0.000          FG_OBUF (FG)
+    ----------------------------------------
+    Total                      4.275ns (0.974ns logic, 3.301ns route)
+                                       (22.8% logic, 77.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    2.498|    1.662|    3.380|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.16 secs
+ 
+--> 
+
+Total memory usage is 4618688 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
