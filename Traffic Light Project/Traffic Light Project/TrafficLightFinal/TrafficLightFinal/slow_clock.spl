@@ -1,0 +1,6 @@
+[Inputs]
+clock
+clear
+[Outputs]
+=speed[5:0]=
+[BiDir]

@@ -1,0 +1,93 @@
+xst -intstyle ise -ifn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.xst" -ofn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.xst" -ofn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.xst" -ofn "C:/Users/h703184703/Downloads/Tennis_A7/TrafficLight/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/ImprovedTrafficLight/top.xst" -ofn "C:/ENGG32B/ImprovedTrafficLight/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/ImprovedTrafficLight/top.xst" -ofn "C:/ENGG32B/ImprovedTrafficLight/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek3/top.xst" -ofn "C:/ENGG32B/TrafficWeek3/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek3/top.xst" -ofn "C:/ENGG32B/TrafficWeek3/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/ENGG32B/TrafficWeek4p2/top.xst" -ofn "C:/ENGG32B/TrafficWeek4p2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc7a100t-csg324-1 top.ngc top.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
