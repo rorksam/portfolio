@@ -1,0 +1,13 @@
+`ifndef DEFS_VH
+`define DEFS_VH
+
+`define OPERAND_SIZE 32
+`define OPERATOR_SIZE 2
+`define MEMORY_WORD_SIZE 32
+`define RAM_SIZE 10
+
+`define ALU_OP_AND 'b00
+`define ALU_OP_OR  'b01
+`define ALU_OP_XOR 'b10
+
+`endif

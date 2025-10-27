@@ -1,0 +1,35 @@
+`include "Defs.vh"
+
+module CPU(input wire clk, input wire rst);
+
+// ALU wires
+wire [`MEMORY_WORD_SIZE-1:0] aW, bW;
+wire [`OPERATOR_SIZE-1:0] opW;
+wire [`MEMORY_WORD_SIZE-1:0] resW;
+
+// RAM wires
+wire weW;
+//reg clk;
+wire [`MEMORY_WORD_SIZE-1:0] dinW;
+wire [`MEMORY_WORD_SIZE-1:0] doutW;
+wire [`RAM_SIZE-1:0] addrW;
+
+ALU alu(.operandA(aW), .operandB(bW), .operation(opW), .result(resW));
+
+RAM ram(.we(weW), .clk(clk), .din(dinW), .dout(doutW), .addr(addrW));
+
+Ctrl ctrl
+(
+	.rst(rst),
+	.op(opW) ,	// output [1:0] op_sig
+	.a(aW) ,	// output [`MEMORY_WORD_SIZE-1:0] a_sig
+	.b(bW) ,	// output [`MEMORY_WORD_SIZE-1:0] b_sig
+	.res(resW) ,	// input [`MEMORY_WORD_SIZE-1:0] res_sig
+	.we(weW) ,	// output  we_sig
+	.clk(clk) ,	// input  clk_sig
+	.din(dinW) ,	// output [31:0] din_sig
+	.dout(doutW) ,	// input [31:0] dout_sig
+	.addr(addrW) 	// output [9:0] addr_sig
+);
+ 
+endmodule

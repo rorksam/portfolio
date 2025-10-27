@@ -1,0 +1,429 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do cpu2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying /home/csc178/intelFPGA_lite/21.1/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src {/home/csc178/projects/cpu2/src/RAM.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:50:20 on Oct 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/csc178/projects/cpu2/src" /home/csc178/projects/cpu2/src/RAM.v 
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# End time: 17:50:20 on Oct 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src {/home/csc178/projects/cpu2/src/Ctrl.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:50:20 on Oct 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/csc178/projects/cpu2/src" /home/csc178/projects/cpu2/src/Ctrl.v 
+# -- Compiling module Ctrl
+# 
+# Top level modules:
+# 	Ctrl
+# End time: 17:50:20 on Oct 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src {/home/csc178/projects/cpu2/src/CPU.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:50:20 on Oct 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/csc178/projects/cpu2/src" /home/csc178/projects/cpu2/src/CPU.v 
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 17:50:20 on Oct 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src {/home/csc178/projects/cpu2/src/ALU.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:50:20 on Oct 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/csc178/projects/cpu2/src" /home/csc178/projects/cpu2/src/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 17:50:20 on Oct 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src {/home/csc178/projects/cpu2/src/CPU_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:50:20 on Oct 24,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/csc178/projects/cpu2/src" /home/csc178/projects/cpu2/src/CPU_tb.v 
+# -- Compiling module CPU_tb
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(45): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(46): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(47): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(48): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# 
+# Top level modules:
+# 	CPU_tb
+# End time: 17:50:20 on Oct 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  CPU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" CPU_tb 
+# Start time: 17:50:20 on Oct 24,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(45): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(46): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(47): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: /home/csc178/projects/cpu2/src/CPU_tb.v(48): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.CPU_tb(fast)
+# Loading work.CPU(fast)
+# Loading work.ALU(fast)
+# Loading work.RAM(fast)
+# Loading work.Ctrl(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# iRAM before run:
+# instruction addr =   0, instruction = 0001000000100000000010010000001010
+# instruction addr =   1, instruction = 1110000000010000000000000000000000
+# instruction addr =   2, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   3, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   4, instruction = 0000000000101000000010110000001100
+# instruction addr =   5, instruction = 0010000000110000000011010000001110
+# instruction addr =   6, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   7, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   8, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   9, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  10, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  11, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  12, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  13, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  14, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  15, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  16, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  17, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  18, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  19, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# 
+# 
+# data ram before run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000000000000000000000000000
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000000000000000000000000000
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000000000000
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# CPU in action
+# addr =    x, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =         250
+# RAM after run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000100010010000000000000111
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000100010010000000000000101
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000011111010
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ** Note: $stop    : /home/csc178/projects/cpu2/src/CPU_tb.v(89)
+#    Time: 64 ns  Iteration: 0  Instance: /CPU_tb
+# Break in Module CPU_tb at /home/csc178/projects/cpu2/src/CPU_tb.v line 89
+# 
+# stdin: <EOF>
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.CPU_tb(fast)
+# Loading work.CPU(fast)
+# Loading work.ALU(fast)
+# Loading work.RAM(fast)
+# Loading work.Ctrl(fast)
+run -continue
+# iRAM before run:
+# instruction addr =   0, instruction = 0001000000100000000010010000001010
+# instruction addr =   1, instruction = 1110000000010000000000000000000000
+# instruction addr =   2, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   3, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   4, instruction = 0000000000101000000010110000001100
+# instruction addr =   5, instruction = 0010000000110000000011010000001110
+# instruction addr =   6, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   7, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   8, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   9, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  10, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  11, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  12, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  13, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  14, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  15, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  16, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  17, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  18, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  19, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# 
+# 
+# data ram before run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000000000000000000000000000
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000000000000000000000000000
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000000000000
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# CPU in action
+# addr =    x, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =         250
+# RAM after run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000100010010000000000000111
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000100010010000000000000101
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000011111010
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ** Note: $stop    : /home/csc178/projects/cpu2/src/CPU_tb.v(89)
+#    Time: 64 ns  Iteration: 0  Instance: /CPU_tb
+# Break in Module CPU_tb at /home/csc178/projects/cpu2/src/CPU_tb.v line 89
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[8]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[9]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[10]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[11]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[12]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[13]
+add wave -position end  sim:/CPU_tb/cpu/ram/mem[14]
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.CPU_tb(fast)
+# Loading work.CPU(fast)
+# Loading work.ALU(fast)
+# Loading work.RAM(fast)
+# Loading work.Ctrl(fast)
+run -continue
+# iRAM before run:
+# instruction addr =   0, instruction = 0001000000100000000010010000001010
+# instruction addr =   1, instruction = 1110000000010000000000000000000000
+# instruction addr =   2, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   3, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   4, instruction = 0000000000101000000010110000001100
+# instruction addr =   5, instruction = 0010000000110000000011010000001110
+# instruction addr =   6, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   7, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   8, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =   9, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  10, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  11, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  12, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  13, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  14, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  15, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  16, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  17, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  18, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# instruction addr =  19, instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# 
+# 
+# data ram before run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000000000000000000000000000
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000000000000000000000000000
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000000000000
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# CPU in action
+# addr =    x, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =           x
+# addr =    8, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8978437
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =    9, dataIn =           x, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8912902
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =     8978439
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =    4, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =           x
+# addr =   10, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =     8978439
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   11, dataIn =     8978439, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =    16318469
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   12, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978437
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   13, dataIn =     8978437, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =     8978687
+# addr =   14, dataIn =         250, dataOut =         250
+# RAM after run:
+# addr =   0, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   1, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   2, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   3, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   4, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   5, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   6, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   7, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =   8, data = 0000000000100010010000000000000101
+# addr =   9, data = 0000000000100010000000000000000110
+# addr =  10, data = 0000000000100010010000000000000111
+# addr =  11, data = 0000000000111110010000000000000101
+# addr =  12, data = 0000000000100010010000000000000101
+# addr =  13, data = 0000000000100010010000000011111111
+# addr =  14, data = 0000000000000000000000000011111010
+# addr =  15, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  16, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  17, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  18, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# addr =  19, data = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ** Note: $stop    : /home/csc178/projects/cpu2/src/CPU_tb.v(89)
+#    Time: 64 ns  Iteration: 0  Instance: /CPU_tb
+# Break in Module CPU_tb at /home/csc178/projects/cpu2/src/CPU_tb.v line 89

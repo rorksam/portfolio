@@ -1,0 +1,142 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/csc178/projects/cpu2/simulation/modelsim
+T_opt
+!s110 1761342621
+VZ8DeB0b8;2^zme8O?XJK;0
+04 6 4 work CPU_tb fast 0
+=1-000ae431a4f1-68fbf49d-13a3b-6d62
+!s124 OEM10U6 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vALU
+Z2 !s110 1761342620
+!i10b 1
+!s100 HKIh2^5?]:>VCYlY89iCB1
+I@1YVW7hg>1g;L0g]dk0>;0
+R0
+Z3 w1761232486
+8/home/csc178/projects/cpu2/src/ALU.v
+F/home/csc178/projects/cpu2/src/ALU.v
+!i122 3
+L0 3 24
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1761342620.000000
+!s107 /home/csc178/projects/cpu2/src/Defs.vh|/home/csc178/projects/cpu2/src/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/csc178/projects/cpu2/src|/home/csc178/projects/cpu2/src/ALU.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+/home/csc178/projects/cpu2/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@u
+vCPU
+R2
+!i10b 1
+!s100 gonS8?Z99?CeGN`I4bKZ@3
+I^3N]4EfDi:4I6=@1YNM;93
+R0
+w1761237410
+8/home/csc178/projects/cpu2/src/CPU.v
+F/home/csc178/projects/cpu2/src/CPU.v
+!i122 2
+L0 3 43
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/csc178/projects/cpu2/src/Defs.vh|/home/csc178/projects/cpu2/src/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/csc178/projects/cpu2/src|/home/csc178/projects/cpu2/src/CPU.v|
+!i113 0
+R7
+R8
+R1
+n@c@p@u
+vCPU_tb
+R2
+!i10b 1
+!s100 1RUO:Uk=hYJ^_[EmIFfg^0
+IGIhXIjK5mE>BPD29l@TjP0
+R0
+w1761237102
+8/home/csc178/projects/cpu2/src/CPU_tb.v
+F/home/csc178/projects/cpu2/src/CPU_tb.v
+!i122 4
+L0 9 85
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/csc178/projects/cpu2/src/Defs.vh|/home/csc178/projects/cpu2/src/CPU_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/csc178/projects/cpu2/src|/home/csc178/projects/cpu2/src/CPU_tb.v|
+!i113 0
+R7
+R8
+R1
+n@c@p@u_tb
+vCtrl
+R2
+!i10b 1
+!s100 Do9]o3Xn=NHjVK7TZYIiA2
+Ii[W1dBY_bAdn`_iKlCYYS2
+R0
+w1761237397
+8/home/csc178/projects/cpu2/src/Ctrl.v
+F/home/csc178/projects/cpu2/src/Ctrl.v
+!i122 1
+L0 3 126
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/csc178/projects/cpu2/src/Defs.vh|/home/csc178/projects/cpu2/src/Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/csc178/projects/cpu2/src|/home/csc178/projects/cpu2/src/Ctrl.v|
+!i113 0
+R7
+R8
+R1
+n@ctrl
+vRAM
+R2
+!i10b 1
+!s100 1g^iI:G:34H1W[JaedDX80
+I16cPFam@4k0OPI59c5NfI3
+R0
+R3
+8/home/csc178/projects/cpu2/src/RAM.v
+F/home/csc178/projects/cpu2/src/RAM.v
+!i122 0
+L0 3 27
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/csc178/projects/cpu2/src/Defs.vh|/home/csc178/projects/cpu2/src/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/csc178/projects/cpu2/src|/home/csc178/projects/cpu2/src/RAM.v|
+!i113 0
+R7
+R8
+R1
+n@r@a@m
