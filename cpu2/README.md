@@ -1,5 +1,6 @@
 # Simple CPU Project
 Authors:	Sam Rork, Professor Oren Segal
+
 Date:		24 October 2025
 
 ## Description
