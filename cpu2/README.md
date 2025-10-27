@@ -1,12 +1,12 @@
-#README:	Simple CPU Project
+# README:	Simple CPU Project
 Authors:	Sam Rork, Professor Oren Segal
 Date:		24 October 2025
 
-##Description
+## Description
 This is a simple CPU design including an ALU, separate instruction and data memory, and a control
 module. Each module type has a testbench, and the testbench CPU_tb.v tests all functionality.
 
-##Definitions
+## Definitions
 The instruction memory holds 34 bits per entry, in the following format:
 
 [4-bit operator][10-bit address A][10-bit address B][10-bit address C]
@@ -21,7 +21,7 @@ Ex. [11_10][00_0000_0000][XXXX_XXXX_XX][XX_XXXX_XXXX]
 	the program counter pc at address [00_0000_0000] in the instruction memory.
 
 
-###ALU
+### ALU
 The ALU module has 3 functions, defined in four bits:
 
 [0000]: OR function
@@ -39,7 +39,7 @@ Ex. operation = [0000], operanda = [00_00000000_00000000_00000000_01010101], ope
 As explained in **Definitions**, if the operation is [1110], the ALU will NOT perform an operation
 and Ctrl.v will perform this step on its own. 
 
-###RAM
+### RAM
 The RAM module takes 4 inputs and 1 output:
 	**INPUTS**
 	clock clk;
@@ -59,7 +59,7 @@ dout.
 Ex. we = 1, din = 'd10, addr = 'd0: the value 10 (the value in din) is placed in mem[0] (defined by
 	addr). If we = 0, the value found in mem[0] 
 
-###Ctrl
+### Ctrl
 The Ctrl module takes many inputs, sends many outputs, and contains 3 parameters. This module
 handles the state machine for the system, walking through the CPU functionality to fetch, interpret
 and execute instructions found in instruction memory. The state machine looks as follows:
@@ -97,7 +97,7 @@ and execute instructions found in instruction memory. The state machine looks as
 
 		Next state: FETCH_INS
 		
-###CPU
+### CPU
 The top module, this holds all other modules underneath it in the hierarchy. This takes two inputs,
 the clock clk and a reset command. It instantiates the ALU, two RAM modules (iRAM and data ram),
 and the Ctrl.
