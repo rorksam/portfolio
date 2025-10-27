@@ -23,4 +23,8 @@ Below are a list of all the different programs you'll find in this file, how to 
 4. Temperature-Song Project
    This project was made on MGTEK MiniIDE, using assembly to program the Dragon12 Plus board to play different songs on the buzzer, based on the temperature read out by the U14 Temperature sensor.
    This can be ran on any Dragon12 board.
-   This was a project for Professor Wing Kwong's ENGG036 class (Microprocessor Systems) at Hofstra University
+   This was a project for Professor Wing Kwong's ENGG036 class (Microprocessor Systems) at Hofstra University.
+5. cpu2
+   Designed in Intel Quartus Lite, this CPU has an ALU, dedicated instruction and data RAM, and a state machine to interpret the instructions.
+   See the README in this project directory for in-depth information about the functionality. See ~/cpu2/src for the module files.
+   This project was for Professor Oren Segal's CSC178 class (Digital Systems Design) at Hofstra Univeristy. 
