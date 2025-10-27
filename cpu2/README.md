@@ -77,38 +77,38 @@ The Ctrl module takes many inputs, sends many outputs, and contains 3 parameters
 handles the state machine for the system, walking through the CPU functionality to fetch, interpret
 and execute instructions found in instruction memory. The state machine looks as follows:
 
-[WAIT_INS]: 	A pause state, used to delay when memory access takes extra time outside a 
+**WAIT_INS**: 	A pause state, used to delay when memory access takes extra time outside a 
 		clock cycle. The next state must be defined before entering this state, as it can
 		point to any state. 
 		
-Next state: ANY
+   Next state: ANY
 
-[FETCH_INS]:	This state loads the instruction index from the program counter, then increments
+**FETCH_INS**:	This state loads the instruction index from the program counter, then increments
 		the program counter. This instruction passes to WAIT_INS before proceeding. 
 		
-Next state: READ_INS_A
+   Next state: READ_INS_A
 
-[READ_INS_A]:	This is the first of two read states. This parses the instruction and requests 
+**READ_INS_A**:	This is the first of two read states. This parses the instruction and requests 
 		the value of address a from data memory. This state passes to WAIT_INS before
 		proceeding.
 		
-Next state: READ_INS_B
+   Next state: READ_INS_B
 		
-[READ_INS_B]:	The second read state, this first handles the CPU_OP_JUMP command. If the operation
+**READ_INS_B**:	The second read state, this first handles the CPU_OP_JUMP command. If the operation
 		matches the value for CPU_OP_JUMP, the address from operand A is stored in the
 		program counter, and the next state will be WAIT_INS. Otherwise, it stores the 
 		answer from data ram and requests the value of address B. In this case, this state
 		passes to WAIT_INS before proceeding.
 		
-Next states: FETCH_INS or EXEC_INS
+   Next states: FETCH_INS or EXEC_INS
 		
-[EXEC_INS]:	This state sends the value for A and B into the ALU with the operation key. 
+**EXEC_INS**:	This state sends the value for A and B into the ALU with the operation key. 
 
-Next state: WRITE_INS
+   Next state: WRITE_INS
 		
-[WRITE_INS]:	This state receives the result of the ALU and stores it into the addr2w.
+**WRITE_INS**:	This state receives the result of the ALU and stores it into the addr2w.
 
-Next state: FETCH_INS
+   Next state: FETCH_INS
 		
 ### CPU.v
 The top module, this holds all other modules underneath it in the hierarchy. This takes two inputs,
