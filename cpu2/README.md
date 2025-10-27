@@ -16,16 +16,21 @@ an output in address C.
 
 There is one operation computed by the ALU, the Jump function, which points the program counter to
 the instruction in address A in instruction memory. 
+
+
 Ex. [11_10][00_0000_0000][XXXX_XXXX_XX][XX_XXXX_XXXX]
-	This instruction word executes the jump command (defined by the operator [1110]) to point 
-	the program counter pc at address [00_0000_0000] in the instruction memory.
+	
+This instruction word executes the jump command (defined by the operator [1110]) to point 
+the program counter pc at address [00_0000_0000] in the instruction memory.
 
 
-### ALU
+### ALU.v
 The ALU module has 3 functions, defined in four bits:
 
 [0000]: OR function
+
 [0001]: AND function
+
 [0010]: XOR function
 
 The ALU accepts these 4 bit values for *operation*, a 34 bit value for *operanda* and another 34
@@ -39,16 +44,23 @@ Ex. operation = [0000], operanda = [00_00000000_00000000_00000000_01010101], ope
 As explained in **Definitions**, if the operation is [1110], the ALU will NOT perform an operation
 and Ctrl.v will perform this step on its own. 
 
-### RAM
+### RAM.v
 The RAM module takes 4 inputs and 1 output:
-	**INPUTS**
-	clock clk;
-	write enable we;
-	data in din;
-	input address addr
+
+**INPUTS**
+
+clock clk;
+
+write enable we;
+
+data in din;
+
+input address addr
+
 	
-	**OUTPUT**
-	data output dout
+**OUTPUT**
+
+data output dout
 	
 The RAM is synchronized to the clock which is defined only in a testbench. An array mem[] is
 defined which has depth 1 << RAM_SIZE. In the case that write enable is set to 1, the data found in
@@ -59,7 +71,7 @@ dout.
 Ex. we = 1, din = 'd10, addr = 'd0: the value 10 (the value in din) is placed in mem[0] (defined by
 	addr). If we = 0, the value found in mem[0] 
 
-### Ctrl
+### Ctrl.v
 The Ctrl module takes many inputs, sends many outputs, and contains 3 parameters. This module
 handles the state machine for the system, walking through the CPU functionality to fetch, interpret
 and execute instructions found in instruction memory. The state machine looks as follows:
@@ -68,18 +80,18 @@ and execute instructions found in instruction memory. The state machine looks as
 		clock cycle. The next state must be defined before entering this state, as it can
 		point to any state. 
 		
-		Next state: ANY
+Next state: ANY
 
 [FETCH_INS]:	This state loads the instruction index from the program counter, then increments
 		the program counter. This instruction passes to WAIT_INS before proceeding. 
 		
-		Next state: READ_INS_A
+Next state: READ_INS_A
 
 [READ_INS_A]:	This is the first of two read states. This parses the instruction and requests 
 		the value of address a from data memory. This state passes to WAIT_INS before
 		proceeding.
 		
-		Next state: READ_INS_B
+Next state: READ_INS_B
 		
 [READ_INS_B]:	The second read state, this first handles the CPU_OP_JUMP command. If the operation
 		matches the value for CPU_OP_JUMP, the address from operand A is stored in the
@@ -87,22 +99,22 @@ and execute instructions found in instruction memory. The state machine looks as
 		answer from data ram and requests the value of address B. In this case, this state
 		passes to WAIT_INS before proceeding.
 		
-		Next states: FETCH_INS or EXEC_INS
+Next states: FETCH_INS or EXEC_INS
 		
 [EXEC_INS]:	This state sends the value for A and B into the ALU with the operation key. 
 
-		Next state: WRITE_INS
+Next state: WRITE_INS
 		
 [WRITE_INS]:	This state receives the result of the ALU and stores it into the addr2w.
 
-		Next state: FETCH_INS
+Next state: FETCH_INS
 		
-### CPU
+### CPU.v
 The top module, this holds all other modules underneath it in the hierarchy. This takes two inputs,
 the clock clk and a reset command. It instantiates the ALU, two RAM modules (iRAM and data ram),
 and the Ctrl.
 
-##Testbench
+## Testbench CPU_tb.v
 The testbench CPU_tb.v loads 4 commands and 7 data values. Before the CPU runs, it prints out all
 instructions and data. After runtime, the data values are printed again. A successful run can be
 found when data memory indexes 10, 12, and 14 are populated with exepcted values based on the 
